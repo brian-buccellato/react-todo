@@ -1,13 +1,17 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
+import { TodoList } from "./components/todo-list.component/todo-list.component";
+import { Header } from "./components/header.component/head.component";
 
 class App extends React.Component {
     render() {
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-sm-6">Todo App</div>
-                    <div className="col-sm-6">Some other crap</div>
+            <div>
+                <div>
+                    <Header title="Todo List App" />
+                </div>
+                <div>
+                    <TodoList />
                 </div>
             </div>
         );
