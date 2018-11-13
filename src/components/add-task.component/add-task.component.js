@@ -48,7 +48,7 @@ export class AddTask extends React.Component {
                             value={this.state.taskName}
                             name="task-name"
                             className="add-task-input"
-                            placeholder="Enter a new task you lazy bastard..."
+                            placeholder="Enter a new task you lazy bum..."
                             onChange={this.handleChange}
                         />
                     </div>
