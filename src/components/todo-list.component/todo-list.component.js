@@ -53,10 +53,6 @@ export class TodoList extends React.Component {
                     display: true
                 })
             });
-            initialTasks.push({
-                name: val,
-                complete: false
-            });
         }
     }
 
@@ -76,18 +72,12 @@ export class TodoList extends React.Component {
         const tasks = tasksCopy.map(task => {
             if (new RegExp(filter).test(task.name.toLowerCase())) {
                 return {
-                    name: task.name,
-                    isSelected: task.isSelected,
-                    deleted: task.deleted,
-                    complete: task.complete,
+                    ...task,
                     display: true
                 };
             } else {
                 return {
-                    name: task.name,
-                    isSelected: task.isSelected,
-                    deleted: task.deleted,
-                    complete: task.complete,
+                    ...task,
                     display: false
                 };
             }
